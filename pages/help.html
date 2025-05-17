@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Get Help </title>
+    <link rel="stylesheet" href="help.css">
+</head>
+
+<body>
+    
+    <!-- navbar div for elements -->
+    <div class="navbar">
+         <div class="nav-item">
+            <img src="../icons/icon1.png" alt="Intro Video Icon" class="nav-icon">
+            <a href="../index.html" class="nav-link"> Intro Video </a>
+        </div>
+
+        <div class="nav-item">
+            <img src="../icons/icon2.png" alt="About Windows Icon" class="nav-icon">
+            <a href="about.html" class="nav-link"> About </a>
+        </div>
+
+        <div class="nav-item">
+            <img src="../icons/icon3.png" alt="Get Windows Icon" class="nav-icon">
+            <a href="get-windows.html" class="nav-link"> Get Windows </a>
+        </div>
+
+        <div class="nav-item">
+            <img src="../icons/icon4.png" alt="Shop Icon" class="nav-icon">
+            <a href="shop.html" class="nav-link"> Shop PCs </a>
+        </div>
+
+        <div class="nav-item">
+            <img src="../icons/icon5.png" alt="Help Icon" class="nav-icon">
+            <a href="help.html" class="nav-link"> Get Help </a>
+        </div>
+    </div>
+
+    <!-- paint ui div for options -->
+    <div class="paint-ui">
+        <div class="paint-menu-bar">
+            <span> File </span>
+            <span> Edit </span>
+            <span> View </span>
+            <span> Image </span>
+            <span class="colors-menu"> Colors ▼
+                <div class="color-options">
+                    <div class="color-option" style="background-color: #000000;"></div>
+                    <div class="color-option" style="background-color: #FF0000;"></div>
+                    <div class="color-option" style="background-color: #00FF00;"></div>
+                    <div class="color-option" style="background-color: #0000FF;"></div>
+                    <div class="color-option" style="background-color: #FFFF00;"></div>
+                    <div class="color-option" style="background-color: #FF00FF;"></div>
+                    <div class="color-option" style="background-color: #00FFFF;"></div>
+                    <div class="color-option" style="background-color: #FFFFFF;"></div>
+                </div>
+            </span>
+            <span id="erase-btn"> Erase </span>
+            <span> Help </span>
+        </div>
+
+        <canvas id="paintCanvas" class="paint-canvas"></canvas>
+
+        <!-- contact form div for user info -->
+        <div class="contact-form">
+            <h3> Contact Support </h3>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Describe your problem..." required></textarea>
+                <button type="submit"> Send </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="help.js"></script>
+</body>
+</html>

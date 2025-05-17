@@ -1,0 +1,317 @@
+/* body styling */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #00807F;
+    font-family: "MS Sans Serif", Arial, sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* navbar styling */
+.navbar {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    z-index: 100;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    cursor: pointer;
+    padding: 8px;
+    transition: padding-left 0.2s ease;
+}
+
+/* navbar hover animation */
+.nav-item:hover {
+    padding-left: 20px;
+    text-decoration: white underline;
+}
+
+.nav-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 8px;
+    object-fit: contain;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.4));
+}
+
+.nav-link {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+    padding: 4px;
+}
+
+/* wrapper for about element styling */
+.wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction:column;
+    padding: 160px 20px 60px;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* about tab styling */
+.about-tab {
+    margin-top: 20px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    max-width: 800px;
+    z-index: 90;
+}
+
+.about-container {
+    min-height: auto;
+    position: relative;
+    background-color: #c0c0c0;
+    border: 3px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    padding-bottom: 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.about-container h3 {
+    background-color: #000080;
+    color: white;
+    margin: 0;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-title {
+    color: black;
+    font-size: 2rem;
+    padding: 20px 20px 10px;
+    margin: 0;
+}
+
+.about-message {
+    color: black;
+    font-size: 15px;
+    padding: 0 20px 10px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.about-content {
+    padding: 10px 20px 20px;
+}
+
+/* windows history carousel styling */
+.windows-history-carousel {
+    margin: 20px 0;
+    position: relative;
+    border: 3px solid #808080;
+    background: #c0c0c0;
+    padding: 2px;
+    box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #000;
+}
+
+.carousel-container {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.carousel-slide img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.carousel-slide h4 {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(192, 192, 192, 0.85);
+    padding: 15px 20px;
+    margin: 0 0 10px 0;
+    border: 2px solid #ffffff;
+    box-shadow: 2px 2px 0 #808080, inset 1px 1px 0 #ffffff;
+    color: #000080;
+    font-size: 24px;
+    max-width: 80%;
+}
+
+.carousel-slide p {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(192, 192, 192, 0.85);
+    padding: 15px 20px;
+    margin: 0;
+    border: 2px solid #ffffff;
+    box-shadow: 2px 2px 0 #808080, inset 1px 1px 0 #ffffff;
+    font-size: 16px;
+    max-width: 80%;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.carousel-prev, 
+.carousel-next {
+    background-color: #c0c0c0;
+    border: 2px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: "MS Sans Serif", sans-serif;
+    font-size: 16px;
+    width: 40px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-prev:hover, 
+.carousel-next:hover {
+    background-color: #000080;
+    color: white;
+}
+
+.carousel-indicators {
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #808080;
+    cursor: pointer;
+    border: 1px solid #000;
+}
+
+.carousel-indicator.active {
+    background-color: #000080;
+}
+
+/* references styling */
+.references {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border: 2px solid #808080;
+    font-size: 12px;
+}
+
+.references h4 {
+    margin: 0 0 10px;
+    color: #000080;
+    font-size: 14px;
+}
+
+.references ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.references li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+/* anchor tag styling */
+a {
+    color: #000080;
+    text-decoration: underline;
+}
+
+/* exit button styling */
+.exit-btn {
+    width: 30px;
+    height: 30px;
+    background-color: #c0c0c0;
+    border: 2px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    font-family: "MS Sans Serif", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* exit button hover animation */
+.exit-btn:hover {
+    background-color: #ff0000;
+    color: white;
+}
+
+/* footer styling */
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: #c0c0c0;
+    border-top: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    z-index: 50;
+}
+
+.footer-content {
+    font-size: 12px;
+    color: black;
+}
+
+/* button styling */
+button:focus, a:focus {
+    outline: 2px dotted #000080;
+}
